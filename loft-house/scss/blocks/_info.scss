@@ -1,0 +1,34 @@
+.info {
+    position: relative;
+    font-size: 18px;
+
+    &--map,
+    &--tel {
+        padding-left: 35px;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 21px;
+            height: 21px;
+
+            background-repeat: no-repeat;
+        }
+    }
+
+    &--map::before {
+        image-rendering: crisp-edges;
+        background-image: url("./../img/svg/map.svg");
+        filter: contrast(1.1) brightness(1.1);
+        filter: drop-shadow(0px 0px 1px #fff);
+    }
+    &--tel::before {
+        image-rendering: crisp-edges;
+        background-image: url("./../img/svg/phone.svg");
+        filter: contrast(1.1) brightness(1.1);
+        filter: drop-shadow(0px 0px 1px #fff);
+    }
+}
